@@ -1,0 +1,7 @@
+name: BanSystemNK-UI
+version: 2.0.0-SNAPSHOT
+author: Mundschutziii
+main: net.llamadevelopment.bansystemui.BanSystemUI
+description: FormUI-Addon for BanSystemNK
+depend:
+  - BanSystemNK

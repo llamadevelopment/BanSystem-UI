@@ -1,0 +1,6 @@
+Commands:
+  Bansystemui:
+    Name: "bansystemui"
+    Description: "Open the Bansystem management menu"
+    Permission: "bansystem.command.bansystemui"
+    Aliases: [ "banui", "bui" ]
