@@ -1,7 +1,7 @@
 package net.llamadevelopment.bansystemui.components.language;
 
 import cn.nukkit.utils.Config;
-import net.llamadevelopment.bansystem.BanSystem;
+import net.llamadevelopment.bansystemui.BanSystemUI;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,8 +13,8 @@ public class Language {
 
     public static void init() {
         messages.clear();
-        BanSystem.getInstance().saveResource("messages.yml");
-        Config m = new Config(BanSystem.getInstance().getDataFolder() + "/messages.yml");
+        BanSystemUI.getInstance().saveResource("messages.yml");
+        Config m = new Config(BanSystemUI.getInstance().getDataFolder() + "/messages.yml");
         for (Map.Entry<String, Object> map : m.getAll().entrySet()) {
             String key = map.getKey();
             if (map.getValue() instanceof String) {

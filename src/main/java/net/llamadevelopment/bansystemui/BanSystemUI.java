@@ -22,7 +22,7 @@ public class BanSystemUI extends PluginBase {
         try {
             this.saveDefaultConfig();
             Language.init();
-            this.formWindows = new FormWindows(this, BanSystemAPI.getProvider());
+            this.formWindows = new FormWindows(BanSystemAPI.getProvider());
             this.loadPlugin();
             this.getLogger().info("§aBanSystem-UI successfully started.");
         } catch (Exception e) {

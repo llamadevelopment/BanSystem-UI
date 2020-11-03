@@ -1,3 +1,103 @@
-prefix: "&8» &aBanSystem &8| &7"
+# - - - Messages - - -
+prefix: "&8» &6BanSystem &8| &7"
 no-permission: "&cYou have insufficient permissions to execute this command."
 
+invalid-input: "&cInvalid input: Some form input is empty or invalid."
+invalid-time: "&cPlease provide a valid time."
+no-data-available: "&cNo data could be found."
+player-is-banned: "&e[0] &cis already banned."
+player-is-muted: "&e[0] &cis already muted."
+player-not-banned: "&e[0] &cis not banned."
+player-not-muted: "&e[0] &cis not muted."
+player-banned: "&e[0] &ahas been banned."
+player-muted: "&e[0] &ahas been muted."
+player-warned: "&e[0] &ahas been warned."
+player-unbanned: "&e[0] &ahas been unbanned."
+player-unmuted: "&e[0] &ahas been unmuted."
+
+# - - - Form UI - - -
+back-button: "&8» &cBack"
+
+management-menu-title: "BanSystem management"
+management-menu-content: ""
+management-punishment-tool: "&8» &4Punishment tool"
+management-data-tool: "&8» &9Data tool"
+
+punishment-menu-title: "Punishment"
+punishment-menu-content: ""
+punishment-ban: "&8» &bBan"
+punishment-mute: "&8» &bMute"
+punishment-unban: "&8» &bUnban"
+punishment-unmute: "&8» &bUnmute"
+punishment-warn: "&8» &bWarn"
+
+ban-menu-title: "Ban a player"
+ban-player: "Provide the player who should be banned."
+ban-player-placeholder: "Player"
+ban-unit: "Select a time unit."
+ban-time: "Set the time of this ban."
+ban-time-placeholder: "Time"
+ban-reason: "Provide the reason why the player should be banned."
+ban-reason-placeholder: "Reason"
+
+mute-menu-title: "Mute a player"
+mute-player: "Provide the player who should be muted."
+mute-player-placeholder: "Player"
+mute-unit: "Select a time unit."
+mute-time: "Set the time of this mute."
+mute-time-placeholder: "Time"
+mute-reason: "Provide the reason why the player should be muted."
+mute-reason-placeholder: "Reason"
+
+unban-menu-title: "Unban a player"
+unban-target: "Provide the player who should be unbanned."
+unban-target-placeholder: "Player"
+
+unmute-menu-title: "Unmute a player"
+unmute-target: "Provide the player who should be unmuted."
+unmute-target-placeholder: "Player"
+
+warn-menu-title: "Warn a player"
+warn-player: "Please provide the player who should be warned."
+warn-player-placeholder: "Player"
+warn-reason: "Please provide the reason why the player should be warned."
+warn-reason-placeholder: "Reason"
+
+data-menu-title: "Data"
+data-menu-content: ""
+data-banlog: "&8» &3Banlog"
+data-mutelog: "&8» &3Mutelog"
+data-warnlog: "&8» &3Warnlog"
+
+banlog-search-menu-title: "Search banlog"
+banlog-search-player: "Provide a player."
+banlog-search-player-placeholder: "Player"
+
+banlog-menu-title: "Banlog result"
+banlog-menu-content: "&aBanlog result of &e[0]&a."
+banlog-ban: "&8» &e[0]\n&8[1]"
+
+banlog-ban-title: "Information about ban [0]"
+banlog-ban-content: "&8» &eID: &f[0]\n&8» &eReason: &f[1]\n&8» &eBanner: &f[2]\n&8» &eDate: &f[3]"
+
+mutelog-search-menu-title: "Search mutelog"
+mutelog-search-player: "Provide a player."
+mutelog-search-player-placeholder: "Player"
+
+mutelog-menu-title: "Mutelog result"
+mutelog-menu-content: "&aMutelog result of &e[0]&a."
+mutelog-mute: "&8» &e[0]\n&8[1]"
+
+mutelog-mute-title: "Information about mute [0]"
+mutelog-mute-content: "&8» &eID: &f[0]\n&8» &eReason: &f[1]\n&8» &eMuter: &f[2]\n&8» &eDate: &f[3]"
+
+warnlog-search-menu-title: "Search warnlog"
+warnlog-search-player: "Provide a player."
+warnlog-search-player-placeholder: "Player"
+
+warnlog-menu-title: "Warnlog result"
+warnlog-menu-content: "&aWarnlog result of &e[0]&a."
+warnlog-warn: "&8» &e[0]\n&8[1]"
+
+warnlog-warn-title: "Information about warn [0]"
+warnlog-warn-content: "&8» &eID: &f[0]\n&8» &eReason: &f[1]\n&8» &eCreator: &f[2]\n&8» &eDate: &f[3]"
