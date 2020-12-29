@@ -6,7 +6,7 @@
 
     <groupId>net.llamadevelopment.bansystemui</groupId>
     <artifactId>BanSystemNK-UI</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -32,7 +32,7 @@
         <dependency>
             <groupId>net.llamadevelopment.bansystem</groupId>
             <artifactId>BanSystemNK</artifactId>
-            <version>2.1.1-20201103.145606-1</version>
+            <version>2.5.0-20201229.153344-1</version>
         </dependency>
     </dependencies>
     <repositories>
