@@ -145,7 +145,7 @@ public class FormWindows {
                     }
                     this.provider.playerIsBanned(target, isBanned -> {
                         if (isBanned) {
-                            this.provider.unbanPlayer(target);
+                            this.provider.unbanPlayer(target, player.getName());
                             player.sendMessage(Language.get("player-unbanned", target));
                         } else player.sendMessage(Language.get("player-not-banned", target));
                     });
@@ -165,7 +165,7 @@ public class FormWindows {
                     }
                     this.provider.playerIsMuted(target, isBanned -> {
                         if (isBanned) {
-                            this.provider.unmutePlayer(target);
+                            this.provider.unmutePlayer(target, player.getName());
                             Player onlinePlayer = Server.getInstance().getPlayer(target);
                             if (onlinePlayer != null) {
                                 this.provider.cachedMutes.remove(onlinePlayer.getName());
