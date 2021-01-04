@@ -5,8 +5,6 @@ import cn.nukkit.Server;
 import cn.nukkit.form.element.ElementButton;
 import cn.nukkit.form.element.ElementDropdown;
 import cn.nukkit.form.element.ElementInput;
-import net.llamadevelopment.bansystem.components.api.BanSystemAPI;
-import net.llamadevelopment.bansystem.components.api.SystemSettings;
 import net.llamadevelopment.bansystem.components.data.Ban;
 import net.llamadevelopment.bansystem.components.data.Mute;
 import net.llamadevelopment.bansystem.components.data.Warn;
@@ -122,10 +120,9 @@ public class FormWindows {
                             else if (unit.equalsIgnoreCase("HOURS")) seconds = finalTime * 3600;
                             else seconds = -1;
                             this.provider.mutePlayer(target, reason, player.getName(), seconds);
-                            SystemSettings settings = BanSystemAPI.getSystemSettings();
                             Player onlinePlayer = Server.getInstance().getPlayer(target);
                             if (onlinePlayer != null) {
-                                this.provider.getMute(target, mute -> settings.cachedMute.put(target, mute));
+                                this.provider.getMute(target, mute -> this.provider.cachedMutes.put(target, mute));
                             }
                             player.sendMessage(Language.get("player-muted", target));
                         });
@@ -148,7 +145,7 @@ public class FormWindows {
                     }
                     this.provider.playerIsBanned(target, isBanned -> {
                         if (isBanned) {
-                            this.provider.unbanPlayer(target);
+                            this.provider.unbanPlayer(target, player.getName());
                             player.sendMessage(Language.get("player-unbanned", target));
                         } else player.sendMessage(Language.get("player-not-banned", target));
                     });
@@ -168,11 +165,10 @@ public class FormWindows {
                     }
                     this.provider.playerIsMuted(target, isBanned -> {
                         if (isBanned) {
-                            this.provider.unmutePlayer(target);
+                            this.provider.unmutePlayer(target, player.getName());
                             Player onlinePlayer = Server.getInstance().getPlayer(target);
                             if (onlinePlayer != null) {
-                                SystemSettings settings = BanSystemAPI.getSystemSettings();
-                                settings.cachedMute.remove(onlinePlayer.getName());
+                                this.provider.cachedMutes.remove(onlinePlayer.getName());
                             }
                             player.sendMessage(Language.get("player-unmuted", target));
                         } else player.sendMessage(Language.get("player-not-muted", target));

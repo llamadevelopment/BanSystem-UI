@@ -2,7 +2,7 @@ package net.llamadevelopment.bansystemui;
 
 import cn.nukkit.plugin.PluginBase;
 import lombok.Getter;
-import net.llamadevelopment.bansystem.components.api.BanSystemAPI;
+import net.llamadevelopment.bansystem.BanSystem;
 import net.llamadevelopment.bansystemui.commands.BansystemuiCommand;
 import net.llamadevelopment.bansystemui.components.forms.FormListener;
 import net.llamadevelopment.bansystemui.components.forms.FormWindows;
@@ -11,18 +11,14 @@ import net.llamadevelopment.bansystemui.components.language.Language;
 public class BanSystemUI extends PluginBase {
 
     @Getter
-    private static BanSystemUI instance;
-
-    @Getter
     public FormWindows formWindows;
 
     @Override
     public void onEnable() {
-        instance = this;
         try {
             this.saveDefaultConfig();
-            Language.init();
-            this.formWindows = new FormWindows(BanSystemAPI.getProvider());
+            Language.init(this);
+            this.formWindows = new FormWindows(BanSystem.getApi().getProvider());
             this.loadPlugin();
             this.getLogger().info("§aBanSystem-UI successfully started.");
         } catch (Exception e) {
